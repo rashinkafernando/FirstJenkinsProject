@@ -9,17 +9,10 @@ pipeline {
         NODE_ENV = 'development'
       }
 
-
 	stages {
-		stage('Install') {
-			steps {
-				sh 'npm install'
-            }
-        }
-
         stage('Build') {
             steps {
-                sh 'npm run build'
+                sh 'npm install'
             }
         }
     }

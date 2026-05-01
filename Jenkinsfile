@@ -5,6 +5,11 @@ pipeline {
 		nodejs 'Node 25'
 	}
 
+	environment {
+        NODE_ENV = 'development'
+      }
+
+
 	stages {
 		stage('Install') {
 			steps {
@@ -22,4 +27,13 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+          echo 'Build succeeded'
+        }
+        failure {
+          echo 'Build failed'
+        }
+      }
+
 }

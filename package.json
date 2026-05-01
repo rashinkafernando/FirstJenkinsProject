@@ -15,7 +15,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "npm run build"
   },
   "dependencies": {
     "jest-cli": "^30.3.0"
